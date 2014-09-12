@@ -43,16 +43,8 @@ describe "RecipesController", ->
 
   describe 'with keywords', ->
     keywords = 'foo'
-    recipes = [
-      {
-        id: 2
-        name: 'Baked Potatoes'
-      },
-      {
-        id: 4
-        name: 'Potatoes Au Gratin'
-      }
-    ]
+    recipes = Factory.buildList 'recipe', 2
+
     beforeEach ->
       setupController(keywords,recipes)
       httpBackend.flush()
