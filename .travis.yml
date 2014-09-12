@@ -22,5 +22,5 @@ script:
 notifications:
   email:
     recipients:
-    - t.bak@selleo.com
+      - t.bak@selleo.com
     format: html
