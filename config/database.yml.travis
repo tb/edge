@@ -1,0 +1,8 @@
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: edge_test
+  pool: 5
+  username: postgres
+  password:
+  template: template0
