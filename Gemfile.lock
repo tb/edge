@@ -182,6 +182,7 @@ DEPENDENCIES
   rails_12factor
   rails_serve_static_assets
   rails_stdout_logging
+  rake
   rspec
   rspec-rails
   sass-rails (~> 4.0.3)
