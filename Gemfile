@@ -21,9 +21,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-gem 'bower-rails'
 gem 'haml'
-gem 'rake'
+gem 'bower-rails'
+gem 'angular-rails-templates'
 
 group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -32,11 +32,15 @@ end
 
 group :test, :development do
   gem 'rspec'
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'factory_girl_rails', '~> 4.0'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'selenium-webdriver'
+  gem 'teaspoon'
+  gem 'guard-teaspoon'
+  gem 'phantomjs'
+  gem 'capybara-webkit'
 end
 
 gem 'foreman'
