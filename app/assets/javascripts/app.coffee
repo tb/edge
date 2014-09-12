@@ -1,0 +1,2 @@
+edge = angular.module('edge',[
+])
