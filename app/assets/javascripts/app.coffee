@@ -6,8 +6,9 @@ receta = angular.module('receta',[
   'ngResource',
   'controllers',
   'angular-flash.service',
-  'angular-flash.flash-alert-directive'
-  'ui.bootstrap'
+  'angular-flash.flash-alert-directive',
+  'ui.bootstrap',
+  'dcbClearInput'
 ])
 
 receta.config([ '$routeProvider', 'flashProvider',
@@ -35,22 +36,3 @@ receta.config([ '$routeProvider', 'flashProvider',
     flashProvider.infoClassnames.push("alert-info")
     flashProvider.successClassnames.push("alert-success")
 ])
-
-@recipes = [
-  {
-    id: 1
-    name: 'Baked Potato w/ Cheese'
-  },
-  {
-    id: 2
-    name: 'Garlic Mashed Potatoes',
-  },
-  {
-    id: 3
-    name: 'Potatoes Au Gratin',
-  },
-  {
-    id: 4
-    name: 'Baked Brussel Sprouts',
-  },
-]
