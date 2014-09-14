@@ -24,6 +24,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'haml'
 gem 'bower-rails'
 gem 'angular-rails-templates'
+gem 'angular_rails_csrf'
 
 group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -42,7 +43,8 @@ group :test, :development do
   gem 'guard-rspec'
   gem 'guard-teaspoon'
   gem 'phantomjs'
-  gem 'capybara-webkit'
+  gem 'poltergeist'
+  gem 'launchy'
 end
 
 gem 'foreman'
