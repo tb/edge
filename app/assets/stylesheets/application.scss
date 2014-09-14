@@ -10,8 +10,12 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require bootstrap-sass-official/assets/stylesheets/_bootstrap.css
- *= require angular.dcb-clear-input
- *= require_self
+ * require_tree .
+ * require bootstrap-sass-official/assets/stylesheets/_bootstrap.css
+ * require angular.dcb-clear-input
+ * require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "angular.dcb-clear-input";

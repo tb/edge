@@ -7,7 +7,6 @@
     "angular-mocks": "latest",
     "angular-flash": "latest",
     "angular-bootstrap": "latest",
-    "tb-factory": "latest",
-    "bootstrap-sass-official": "latest"
+    "tb-factory": "latest"
   }
 }
