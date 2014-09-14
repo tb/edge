@@ -22,10 +22,15 @@ describe "RecipesController", ->
       if results
         request = new RegExp("\/recipes.*keywords=#{keywords}")
         httpBackend.expectGET(request).respond(results)
+      else
+        request = new RegExp("\/recipes.*")
+        httpBackend.expectGET(request).respond([])
 
       ctrl = $controller('RecipesController',
         $scope: scope
         $location: location)
+
+      httpBackend.flush()
     )
 
   beforeEach(module("receta"))
@@ -47,7 +52,6 @@ describe "RecipesController", ->
 
     beforeEach ->
       setupController(keywords,recipes)
-      httpBackend.flush()
 
     it 'calls the back-end', ->
       expect(scope.recipes).toEqualData(recipes)
