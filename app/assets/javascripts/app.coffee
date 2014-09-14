@@ -7,6 +7,7 @@ receta = angular.module('receta',[
   'controllers',
   'angular-flash.service',
   'angular-flash.flash-alert-directive'
+  'ui.bootstrap'
 ])
 
 receta.config([ '$routeProvider', 'flashProvider',
