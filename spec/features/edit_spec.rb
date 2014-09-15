@@ -19,7 +19,7 @@ feature "Creating, editing, and deleting a recipe", js: true do
     fill_in "instructions", with: "Slather in oil, then roast for 20 minutes"
 
     click_on "Save"
-    sleep 0.5
+    sleep 1
 
     expect(page).to have_content("Roasted Brussel Sprouts")
     expect(page).to have_content("then roast for 20 minutes")
@@ -29,7 +29,7 @@ feature "Creating, editing, and deleting a recipe", js: true do
     click_on "Search"
 
     click_on "Roasted Brussel Sprouts"
-    sleep 0.5
+    sleep 1
 
     click_on "Delete"
 
