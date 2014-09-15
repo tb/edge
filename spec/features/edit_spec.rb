@@ -9,17 +9,19 @@ feature "Creating, editing, and deleting a recipe", js: true do
     fill_in "instructions", with: "Slather in oil, then bake for 20 minutes"
 
     click_on "Save"
+    sleep 0.5
 
     expect(page).to have_content("Baked Brussel Sprouts")
     expect(page).to have_content("Slather in oil")
 
     click_on "Edit"
+    sleep 0.5
 
     fill_in "name", with: "Roasted Brussel Sprouts"
     fill_in "instructions", with: "Slather in oil, then roast for 20 minutes"
 
     click_on "Save"
-    sleep 1
+    sleep 0.5
 
     expect(page).to have_content("Roasted Brussel Sprouts")
     expect(page).to have_content("then roast for 20 minutes")
@@ -29,7 +31,7 @@ feature "Creating, editing, and deleting a recipe", js: true do
     click_on "Search"
 
     click_on "Roasted Brussel Sprouts"
-    sleep 1
+    sleep 0.5
 
     click_on "Delete"
 
