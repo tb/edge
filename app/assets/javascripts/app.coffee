@@ -36,3 +36,11 @@ receta.config([ '$routeProvider', 'flashProvider',
     flashProvider.infoClassnames.push("alert-info")
     flashProvider.successClassnames.push("alert-success")
 ])
+
+productsApp = angular.module('productsApp',[
+  'templates',
+  'ngRoute',
+  'ngResource',
+  'controllers',
+  'ui.bootstrap'
+])

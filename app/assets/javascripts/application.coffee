@@ -11,6 +11,7 @@
 # about supported directives.
 #
 #= require jquery
+#= require lodash
 #= require bootstrap-sprockets
 #= require jquery_ujs
 #= require angular/angular
@@ -20,4 +21,5 @@
 #= require angular-flash
 #= require angular.dcb-clear-input
 #= require angular-rails-templates
+#= require jquery-tablesorter
 #= require_tree .

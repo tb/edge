@@ -7,6 +7,8 @@
     "angular-mocks": "latest",
     "angular-flash": "latest",
     "angular-bootstrap": "latest",
-    "tb-factory": "latest"
+    "tb-factory": "latest",
+    "lodash": "latest",
+    "tablesorter": "latest"
   }
 }

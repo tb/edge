@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'home#index'
-  resources :recipes, only: [:index, :show, :create, :update, :destroy]
+  resources :products
+  resources :recipes
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

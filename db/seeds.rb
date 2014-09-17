@@ -10,3 +10,14 @@ Recipe.create!(name: 'Baked Potato w/ Cheese')
 Recipe.create!(name: 'Garlic Mashed Potatoes')
 Recipe.create!(name: 'Potatoes Au Gratin')
 Recipe.create!(name: 'Baked Brussel Sprouts')
+
+include FactoryGirl::Syntax::Methods
+
+(1..3).each do
+  category = create :category
+  (1..10).each do
+    create :product, category: category
+  end
+end
+
+

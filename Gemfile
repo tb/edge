@@ -26,6 +26,8 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bower-rails'
 gem 'angular-rails-templates'
 gem 'angular_rails_csrf'
+gem 'gon'
+gem 'jquery-tablesorter'
 
 group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -37,6 +39,7 @@ group :test, :development do
   gem 'rspec'
   gem 'rspec-rails', '~> 2.0'
   gem 'factory_girl_rails', '~> 4.0'
+  gem 'ffaker'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'selenium-webdriver'
