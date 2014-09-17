@@ -1,0 +1,16 @@
+%aside.flash.row
+  %article.col-md-6.col-md-offset-3.col-sm-12{"active-class" => "alert", :duration => "0", "flash-alert" => ""}
+
+%section.col-md-6.col-md-offset-3
+  %article.panel.panel-info{"ng-if" => "recipe"}
+    %header.panel-heading
+      %h1 {{recipe.name}}
+    %p.panel-body {{recipe.instructions}}
+
+  %section
+    .col-md-3
+      %button.btn.btn-default{"ng-click" => "back()"}
+        &larr; Back
+    .col-md-9.text-right
+      %button.btn.btn-info{"ng-click" => "edit()"} Edit
+      %button.btn.btn-danger{"ng-click" => "delete()"} Delete
