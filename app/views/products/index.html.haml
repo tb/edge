@@ -1,27 +1,36 @@
-%div{"ng-app" => "productsApp", "ng-controller" => 'ProductsController'}
+.row{"ng-controller" => 'ProductsController'}
+  .col-sm-3
+    .panel.panel-default
+      .panel-heading Categories
+      .list-group
+        - @categories.each do |category|
+          %a.list-group-item{:href => "#"}
+            = category.name
+            %span.badge
+              = category.products.count
 
-  %h1 Products#index
+    .panel.panel-default.ng-cloak{"ng-show" => "selectedProducts().length"}
+      .panel-heading Selected products
+      .list-group
+        .list-group-item{"ng-repeat" => 'product in selectedProducts()'}
+          %input{type: "checkbox", "ng-model" => "product.selected"}
+          {{product.name}}
 
-  %div.ng-cloak{"ng-show" => "selectedProducts().length"}
-    %h3 Selected products
-    %ul
-      %li{"ng-repeat" => 'product in selectedProducts()'}
-        {{product.name}}
-
-  %table.table#products
-    %thead
-      %tr
-        %th
-        %th Category
-        %th Product name
-        %th Description
-    %tbody
-      - @products.each do |product|
-        %tr{"ng-class" => "{active: productById(#{product.id}).selected}"}
-          %td
-            %input{type: "checkbox", "ng-model" => "productById(#{product.id}).selected"}
-          %td= product.category_name
-          %td= product.name
-          %td= raw product.description
-
-:coffee
+  .col-sm-9
+    .panel.panel-default
+      .panel-heading Products in all categories
+      %table.table#products
+        %thead
+          %tr
+            %th
+            %th Category
+            %th Product name
+            %th Description
+        %tbody
+          - @products.each do |product|
+            %tr{"ng-class" => "{active: productById(#{product.id}).selected}"}
+              %td
+                %input{type: "checkbox", "ng-model" => "productById(#{product.id}).selected"}
+              %td= product.category_name
+              %td= product.name
+              %td= raw product.description
