@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'home#index'
-  resources :products
+  namespace :seo do
+    resources :products
+  end
   resources :recipes
 
   # Example of regular route:
