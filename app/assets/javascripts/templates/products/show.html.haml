@@ -1,0 +1,7 @@
+%header.row
+  %h1.text-center {{product.name}}
+
+%p(ng-bind-html='product.description | sanitize')
+
+%a.btn.btn-default(href='#/products')
+  &larr; Back

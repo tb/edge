@@ -12,6 +12,7 @@
 #
 #= require jquery
 #= require lodash
+#= require utils
 #= require bootstrap-sprockets
 #= require jquery_ujs
 #= require angular/angular
@@ -21,5 +22,6 @@
 #= require angular-flash
 #= require angular.dcb-clear-input
 #= require angular-rails-templates
+#= require restangular
 #= require jquery-tablesorter
 #= require_tree .

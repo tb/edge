@@ -15,19 +15,15 @@ receta.config([ '$routeProvider', 'flashProvider',
   ($routeProvider, flashProvider)->
     $routeProvider
     .when('/',
-        templateUrl: "index.html"
+        templateUrl: "recipes/index.html"
         controller: 'RecipesController'
       )
     .when('/recipes/new',
-        templateUrl: "form.html"
+        templateUrl: "recipes/form.html"
         controller: 'RecipeController'
       )
     .when('/recipes/:recipeId',
-        templateUrl: "show.html"
-        controller: 'RecipeController'
-      )
-    .when('/recipes/:recipeId/edit',
-        templateUrl: "form.html"
+        templateUrl: "recipes/show.html"
         controller: 'RecipeController'
       )
 
@@ -35,12 +31,4 @@ receta.config([ '$routeProvider', 'flashProvider',
     flashProvider.warnClassnames.push("alert-warning")
     flashProvider.infoClassnames.push("alert-info")
     flashProvider.successClassnames.push("alert-success")
-])
-
-productsApp = angular.module('productsApp',[
-  'templates',
-  'ngRoute',
-  'ngResource',
-  'controllers',
-  'ui.bootstrap'
 ])

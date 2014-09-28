@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :seo do
     resources :products
   end
+  resources :products
   resources :recipes
 
   # Example of regular route:
