@@ -9,6 +9,6 @@
     "angular-bootstrap": "latest",
     "tb-factory": "latest",
     "lodash": "latest",
-    "tablesorter": "latest"
+    "restangular": "latest"
   }
 }
