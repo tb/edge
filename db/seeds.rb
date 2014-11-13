@@ -13,6 +13,10 @@ Recipe.create!(name: 'Baked Brussel Sprouts')
 
 include FactoryGirl::Syntax::Methods
 
+admin = create :user,
+               email: 't.bak@selleo.com',
+               password: 'secret123'
+
 (1..3).each do
   category = create :category
   (1..10).each do
