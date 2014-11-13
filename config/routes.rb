@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  mount Ckeditor::Engine => '/ckeditor'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  root 'admin/categories#index'
+
+  namespace :admin do
+    resources :categories
+  end
+
   namespace :seo do
     resources :products
   end
+
   resources :products
   resources :recipes
 

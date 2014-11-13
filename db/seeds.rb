@@ -16,8 +16,12 @@ include FactoryGirl::Syntax::Methods
 (1..3).each do
   category = create :category
   (1..10).each do
-    create :product, category: category
+    create :item, category: category
   end
 end
 
-
+# properties = [
+#   { name: 'Brand', type: 'String' },
+#   { name: 'Screen size', type: 'Float' },
+#   { name: 'Colours', type: 'Array' }
+# ]

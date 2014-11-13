@@ -17,3 +17,4 @@
 /.idea/
 /config/database.yml
 node_modules/
+public/uploads/
