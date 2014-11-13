@@ -4,6 +4,9 @@ ruby '2.1.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
 gem 'pg'
+gem 'rails_12factor', group: :production
+gem 'unicorn'
+
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -38,11 +41,4 @@ group :test, :development do
   gem 'phantomjs'
   gem 'poltergeist'
   gem 'launchy'
-end
-
-gem 'foreman'
-group :production, :staging do
-  gem 'rails_12factor'
-  gem 'rails_stdout_logging'
-  gem 'rails_serve_static_assets'
 end
