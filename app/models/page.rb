@@ -6,8 +6,13 @@ class Page < ActiveRecord::Base
 
   rails_admin do
     list do
-      field :slug
       field :title
+      field :slug do
+        formatted_value do
+          link = "/#{value}"
+          (bindings[:view].link_to(link, link, target: :blank)).html_safe
+        end
+      end
     end
 
     edit do
