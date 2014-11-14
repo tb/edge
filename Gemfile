@@ -34,7 +34,7 @@ gem 'nested_form'
 gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'rails_admin'
+gem 'rails_admin', github: 'sferik/rails_admin'
 gem 'rails_admin_nestable'
 
 group :development do
