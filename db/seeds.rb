@@ -11,7 +11,6 @@ Recipe.create!(name: 'Garlic Mashed Potatoes')
 Recipe.create!(name: 'Potatoes Au Gratin')
 Recipe.create!(name: 'Baked Brussel Sprouts')
 
-require 'factory_girl_rails'
 include FactoryGirl::Syntax::Methods
 
 admin = create :user,
